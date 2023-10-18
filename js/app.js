@@ -1,3 +1,7 @@
+const cardsDOMElements = document.querySelector('.cards');
+
+// MILESTONE 0
+
 const teamMembers = [
   {
     nome: 'Wayne Barnett',
@@ -31,22 +35,54 @@ const teamMembers = [
   },
 ];
 
-function printArray(array) {
-  let memberName;
-  let memberRole;
-  let memberPicture;
+// MILESTONE 1
 
+function printArrayLog(array) {
   for (i = 0; i < teamMembers.length; i++) {
-    memberName = teamMembers[i].nome;
-    memberRole = teamMembers[i].ruolo;
-    memberPicture = teamMembers[i].foto;
+    let memberName = teamMembers[i].nome;
+    let memberRole = teamMembers[i].ruolo;
+    let memberPicture = teamMembers[i].foto;
 
     console.log(`Nome ${memberName}`);
     console.log(`Ruolo ${memberRole}`);
     console.log(`Foto ${memberPicture}`);
     console.log('---------------------');
   }
-  return [memberName, memberRole, memberPicture];
 }
 
-printArray(teamMembers);
+// printArrayLog(teamMembers);
+
+// MILESTONE 2
+
+function printArrayDom(array) {
+  for (i = 0; i < teamMembers.length; i++) {
+    let memberName = teamMembers[i].nome;
+    let memberRole = teamMembers[i].ruolo;
+    let memberPicture = teamMembers[i].foto;
+
+    cardsDOMElement.innerHTML += `<div class='card'>${memberName} ${memberRole} ${memberPicture}</div>`;
+  }
+}
+
+// printArrayDom(teamMembers);
+
+// BONUS 2
+
+function printArrayDomCard(array) {
+  for (i = 0; i < teamMembers.length; i++) {
+    let memberName = teamMembers[i].nome;
+    let memberRole = teamMembers[i].ruolo;
+    let memberPicture = teamMembers[i].foto;
+
+    let card = document.createElement('div');
+    let cardContent = `<div class='text'><h4>${memberName}</h4><h6>${memberRole}</h6><div>`;
+    let cardPicture = `<img class='img' src="./img/${memberPicture}" alt="" />`;
+
+    card.classList.add('card');
+    card.innerHTML += cardPicture;
+    card.innerHTML += cardContent;
+    cardsDOMElements.append(card);
+  }
+}
+
+printArrayDomCard(teamMembers);

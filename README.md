@@ -23,12 +23,8 @@
 - Trasformare la stringa foto in una immagine effettiva
 
 # BONUS 2:
-Organizzare i singoli membri in card/schede (vedi screenshot)
-Consigli del giorno:
-Ragioniamo come sempre a step.
-Prima la logica in italiano e poi traduciamo in codice.
-E ricordiamoci che console.log() è nostro amico!
-dati
+
+- Organizzare i singoli membri in card/schede (vedi screenshot)
 
 - Wayne Barnett Founder & CEO wayne-barnett-founder-ceo.jpg
 - Angela Caroll Chief Editor angela-caroll-chief-editor.jpg
