@@ -2,31 +2,51 @@ const teamMembers = [
   {
     nome: 'Wayne Barnett',
     ruolo: 'Founder & CEO',
-    foto: '.././img/wayne-barnett-founder-ceo.jpg',
+    foto: 'wayne-barnett-founder-ceo.jpg',
   },
   {
     nome: 'Angela Caroll',
     ruolo: 'Chief Editor',
-    foto: '.././img/angela-caroll-chief-editor.jpg',
+    foto: 'angela-caroll-chief-editor.jpg',
   },
   {
     nome: 'Walter Gordon',
     ruolo: 'Office Manager',
-    foto: '.././img/walter-gordon-office-manager.jpg',
+    foto: 'walter-gordon-office-manager.jpg',
   },
   {
     nome: 'Angela Lopez',
     ruolo: 'Social Media Manager',
-    foto: '.././img/angela-lopez-social-media-manager.jpg',
+    foto: 'angela-lopez-social-media-manager.jpg',
   },
   {
     nome: 'Scott Estrada',
     ruolo: 'Developer',
-    foto: '.././img/scott-estrada-developer.jpg',
+    foto: 'scott-estrada-developer.jpg',
   },
   {
     nome: 'Barbara Ramos',
     ruolo: 'Graphic Designer',
-    foto: '.././img/barbara-ramos-graphic-designer.jpg',
+    foto: 'barbara-ramos-graphic-designer.jpg',
   },
 ];
+
+function printArray(array) {
+  let memberName;
+  let memberRole;
+  let memberPicture;
+
+  for (i = 0; i < teamMembers.length; i++) {
+    memberName = teamMembers[i].nome;
+    memberRole = teamMembers[i].ruolo;
+    memberPicture = teamMembers[i].foto;
+
+    console.log(`Nome ${memberName}`);
+    console.log(`Ruolo ${memberRole}`);
+    console.log(`Foto ${memberPicture}`);
+    console.log('---------------------');
+  }
+  return [memberName, memberRole, memberPicture];
+}
+
+printArray(teamMembers);
